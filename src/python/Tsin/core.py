@@ -509,13 +509,13 @@ class TerrainRenderer:
             1.0
         )
 
-    def render_terrain(self, terrain: TerrainGenerator):
-        glColor3f(0.4, 0.6, 0.3)
+    def render_terrain(terrain):
+        glColor3f(0.4, 0.6, 0.3)  # 默认绿色
         glBegin(GL_QUADS)
         for (x, z) in terrain.generated_area:
-            x_pos = x * terrain.constants.TERRAIN_BLOCK_SIZE
-            z_pos = z * terrain.constants.TERRAIN_BLOCK_SIZE
-            bs = terrain.constants.TERRAIN_BLOCK_SIZE
+            x_pos = x * terrain.block_size
+            z_pos = z * terrain.block_size
+            bs = terrain.block_size
 
             try:
                 y00 = terrain.vertices[(x, z)]
@@ -524,6 +524,19 @@ class TerrainRenderer:
                 y11 = terrain.vertices[(x + 1, z + 1)]
             except KeyError:
                 continue
+
+            # 根据高度设置颜色 - 简单的高度梯度
+            avg_height = (y00 + y10 + y01 + y11) / 4.0
+            if avg_height > 8.0:
+                glColor3f(0.7, 0.7, 0.7)  # 灰色 - 高山
+            elif avg_height > 5.0:
+                glColor3f(0.5, 0.5, 0.3)  # 棕色 - 丘陵
+            elif avg_height > 2.0:
+                glColor3f(0.4, 0.6, 0.3)  # 绿色 - 平原
+            elif avg_height > 0.0:
+                glColor3f(0.9, 0.8, 0.6)  # 沙色 - 沙滩
+            else:
+                glColor3f(0.3, 0.3, 0.8)  # 蓝色 - 水域
 
             dx = y10 - y00
             dz = y01 - y00
