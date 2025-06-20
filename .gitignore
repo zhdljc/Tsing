@@ -1,29 +1,29 @@
-### Compiled class file
-##*.class
-##
-### Log file
-##*.log
-##
-### BlueJ files
-##*.ctxt
-##
-### Mobile Tools for Java (J2ME)
-##.mtj.tmp/
-##
-### Package Files #
-##*.jar
-##*.war
-##*.nar
-##*.ear
-##*.zip
-##*.tar.gz
-##*.rar
-##
-### virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
-##hs_err_pid*
-##replay_pid*
-#
-#\\
+# Compiled class file
+*.class
+
+# Log file
+*.log
+
+# BlueJ files
+*.ctxt
+
+# Mobile Tools for Java (J2ME)
+.mtj.tmp/
+
+# Package Files #
+*.jar
+*.war
+*.nar
+*.ear
+*.zip
+*.tar.gz
+*.rar
+
+# virtual machine crash logs, see http://www.java.com/en/download/help/error_hotspot.xml
+hs_err_pid*
+replay_pid*
+
+\\
 ## Created by https://www.toptal.com/developers/gitignore/api/java,python,c++,csharp,intellij+all,pycharm+all,rider,jetbrains+all,clion+all,webstorm+all,windows,unrealengine,linux,macos,cmake,gradle,flask,django,xcode,xcodeinjection,archlinuxpackages,groovy,kotlin,rubymine+all,ruby,pycharm,yarn,maven,visualstudiocode,jupyternotebooks,microsoftoffice,rust-analyzer,clion,unity,intellij
 ## Edit at https://www.toptal.com/developers/gitignore?templates=java,python,c++,csharp,intellij+all,pycharm+all,rider,jetbrains+all,clion+all,webstorm+all,windows,unrealengine,linux,macos,cmake,gradle,flask,django,xcode,xcodeinjection,archlinuxpackages,groovy,kotlin,rubymine+all,ruby,pycharm,yarn,maven,visualstudiocode,jupyternotebooks,microsoftoffice,rust-analyzer,clion,unity,intellij
 #
