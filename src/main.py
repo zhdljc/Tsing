@@ -1,7 +1,8 @@
 from Tsin.core import *
 
-engine = Tsin()
-engine.init()
-while engine.update():
-    pass
-engine.shutdown()
+if __name__ == '__main__':
+    engine = Tsin()
+    engine.init()
+    while engine.update():
+        pass
+    engine.shutdown()
